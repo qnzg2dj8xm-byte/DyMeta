@@ -1,0 +1,25 @@
+data:
+  base_path: "/data/raw/"
+  mouse_ids: ['#1', '#3', '#5']
+  test_mouse_id: '#5'
+
+signal:
+  fs_calcium: 1.92
+  seq_len_encoder: 5
+  time_lag_sec: 5.0
+
+model:
+  hidden_dim: 64
+  num_classes: 4
+  future_steps: 5
+
+training:
+  seed: 42
+  batch_size: 128
+  learning_rate: 0.001
+
+labels:
+  concept_names: ['EEG_Delta', 'EEG_Theta', 'Delta_Theta_Ratio', 'EMG_Power',
+                 'Beh_Motor', 'Beh_Locomotion', 'Beh_Grooming', 'Beh_NestGrooming',
+                 'Beh_NestActivity', 'Beh_Rearing', 'Beh_Drinking', 'Beh_Eating', 'Beh_Nesting']
+  stage_names: ['Microarousal', 'NREM', 'REM', 'Wake']
