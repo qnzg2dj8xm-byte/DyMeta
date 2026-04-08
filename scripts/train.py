@@ -141,6 +141,7 @@ def main():
 
     save_path = "checkpoints/dynameta_best.pth"
     torch.save(model.state_dict(), save_path)
+    torch.save(proto_registry.get_prototypes(), "checkpoints/prototypes.pth")
     print("-" * 65)
     print(f"[SUCCESS] Training Completed. Weights saved to: {save_path}")
     print("=" * 65)
