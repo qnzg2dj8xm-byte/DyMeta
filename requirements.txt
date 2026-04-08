@@ -11,3 +11,4 @@ sklearn
 src
 torch
 yaml
+tqdm
